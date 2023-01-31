@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Upload</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <h1 class="text-center mb-5">Upload a PDF file</h1>
+          <form method="POST" enctype="multipart/form-data" action="{{url_for('pdf_processing')}}">
+            <div class="form-group">
+              <div class="custom-file">
+                <input type="file" name="myfile" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <input type="submit" value="Upload" class="btn btn-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  <script>
+  // Add the following script to show the chosen file name in the 'Choose file' bar
+  document.getElementById("customFile").onchange = function() {
+    document.getElementById("customFile").classList.add("selected");
+    var fileName = document.getElementById("customFile").files[0].name;
+    document.getElementsByClassName("custom-file-label")[0].innerHTML = fileName;
+  };
+  </script>
+  </body>
+</html>

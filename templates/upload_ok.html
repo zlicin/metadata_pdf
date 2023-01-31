@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Uploaded Successfully</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h1 class="text-center">File Uploaded Successfully!</h1>
+          <div class="alert alert-success" role="alert">
+            File metadata: {{metadata}}
+            <br>
+            File ID: {{uid}}
+            <br>
+            File name: {{file_name}}
+            <br>
+            File size: {{file_size}}
+            <br>
+            File type: {{file_type}}
+            <br>
+            File extension: {{extension}}
+            <br>
+            File content: {{text}}
+            <br>
+            File added to processing queue
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
